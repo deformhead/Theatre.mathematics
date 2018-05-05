@@ -17,6 +17,32 @@ describe('#hypothenuse()', function () {
     });
 });
 
+describe('#normalize()', function () {
+
+    it('should return the normalized value of given input', function () {
+
+        expect(mathematics.normalize(-6, -4, -2)).to.equal(-1);
+        expect(mathematics.normalize(-5, -4, -2)).to.equal(-0.5);
+        expect(mathematics.normalize(-4, -4, -2)).to.equal(0);
+        expect(mathematics.normalize(-3, -4, -2)).to.equal(0.5);
+        expect(mathematics.normalize(-2, -4, -2)).to.equal(1);
+        expect(mathematics.normalize(0, -4, -2)).to.equal(2);
+        expect(mathematics.normalize(2, -4, -2)).to.equal(3);
+
+        expect(mathematics.normalize(-4, -2, 0)).to.equal(-1);
+        expect(mathematics.normalize(-3, -2, 0)).to.equal(-0.5);
+        expect(mathematics.normalize(-2, -2, 0)).to.equal(0);
+        expect(mathematics.normalize(-1, -2, 0)).to.equal(0.5);
+        expect(mathematics.normalize(0, -2, 0)).to.equal(1);
+        expect(mathematics.normalize(2, -2, 0)).to.equal(2);
+
+        expect(mathematics.normalize(-2, 0, 2)).to.equal(-1);
+        expect(mathematics.normalize(-1, 0, 2)).to.equal(-0.5);
+        expect(mathematics.normalize(0, 0, 2)).to.equal(0);
+        expect(mathematics.normalize(1, 0, 2)).to.equal(0.5);
+        expect(mathematics.normalize(2, 0, 2)).to.equal(1);
+    });
+});
 
 describe('#sigmoid()', function () {
 
