@@ -17,6 +17,19 @@ describe('#hypothenuse()', function () {
     });
 });
 
+describe('#identity()', function () {
+
+    it('should return the identity of given input', function () {
+
+        for (let iterator = 0; iterator < 10; iterator += 1) {
+
+            const x = (Math.random() * 2) - 1;
+
+            expect(mathematics.identity(x)).to.equal(x);
+        }
+    });
+});
+
 describe('#normalize()', function () {
 
     it('should return the normalized value of given input', function () {
