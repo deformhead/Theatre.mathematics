@@ -4,6 +4,12 @@ export function hypothenuse(ab, ac) {
     return Math.sqrt(Math.pow(ab, 2) + Math.pow(ac, 2));
 };
 
+export function identity(x) {
+
+    // return the identity of given x
+    return x;
+};
+
 export function normalize(x, minimum, maximum) {
 
     // return the normalized value with (0, 1) range of given x with given (minimum, maximum) range
