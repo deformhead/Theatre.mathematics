@@ -22,10 +22,5 @@ function sigmoid(x) {
     return 1 / (1 + Math.exp(-x));
 }
 
-export {
-
-    hypothenuse,
-    identity,
-    normalize,
-    sigmoid
-};
+// exports current module as functions
+export {hypothenuse, identity, normalize, sigmoid};
